@@ -16,7 +16,7 @@ const tasksStorageKey = "to-do-items";
 // void => string[]
 function loadTasks() {
 	const tasks = localStorage.getItem(tasksStorageKey);
-	if (tasks === "undefined") {
+	if (tasks === null) {
 		return items;
 	}
 	return JSON.parse(tasks);
